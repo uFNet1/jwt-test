@@ -1,6 +1,5 @@
 import express from 'express';
 import dotenv from "dotenv";
-import passport from "passport";
 import authRoutes from "./routes/auth.js";
 import sequelize from "./models/db.js";
 import path from 'node:path';
@@ -26,9 +25,6 @@ const start = async () => {
   }
 };
 await start();
-
-// require("./config/passport")(passport);
-app.use(passport.initialize());
 
 app.use("/api", authRoutes);
 app.get('/', (req, res) => {
