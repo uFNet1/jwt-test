@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="status">Сторінка адміністратора</h1>
+  
+  <p id="text"></p>
+  <script>
+    if (document.cookie !=='') {
+      document.querySelector('#status').style.color = "#00ff00";
+      document.querySelector('#text').textContent = 'Успіх! Ви Адміністратор'
+    } else {
+      document.querySelector('#status').style.color = "#ff0000";
+      document.querySelector('#text').textContent = 'JWT не працює'
+    }
+  </script>
+</body>
+</html>
